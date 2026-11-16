@@ -1,0 +1,29 @@
+# Environment variables and secrets (NEVER commit secrets to Git)
+.env
+.env.local
+.env.example
+*.env
+
+# ChromaDB vector database files (re-generated on ingest)
+chroma_db/
+*.sqlite3
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+

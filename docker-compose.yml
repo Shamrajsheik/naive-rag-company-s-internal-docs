@@ -1,0 +1,18 @@
+services:
+  naive-rag:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: novatech-naive-rag
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      # Persist ChromaDB vector store across container restarts
+      - chroma_data:/app/chroma_db
+    restart: unless-stopped
+
+volumes:
+  chroma_data:
+
